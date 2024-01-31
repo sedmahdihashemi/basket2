@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+body > video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  scale: 1.1;
+}
+body > div {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(39, 36, 36, 0.438);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  box-shadow: inset -1000px 0px 20px rgba(185, 70, 70, 0.683);
+  background-image: url(../img/video_2024-01-31_03-44-12.mp4);
+  align-items: flex-end;
+}
+main > .col {
+  width: 100px;
+  height: 150px;
+  z-index: 10;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 2s;
+  transform: rotateY(-10deg) rotateX(10deg);
+}
+main > .col > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 8px;
+}
+main > .col > div:nth-of-type(1) {
+  background-color: rgba(245, 243, 243, 0.9843137255);
+  transform: translateZ(-250px);
+  border: 2px solid rgb(9, 9, 9);
+}
+main > .col > div:nth-of-type(2) {
+  transform: translateZ(250px);
+  background-color: rgba(249, 249, 249, 0.4941176471);
+}
+main > .col > div:nth-of-type(3) {
+  width: 520px;
+  transform: translateZ(250px) rotateY(90deg);
+  border: 2px solid black;
+  background-color: #fff;
+  transform-origin: left;
+}
+main > .col > div:nth-of-type(4) {
+  transform: translateZ(250px) rotateY(-90deg);
+  transform-origin: right;
+}
+main > .col > div:nth-of-type(5) {
+  width: 98px;
+  height: 510px;
+  background-color: #fff;
+  position: relative;
+  z-index: -10;
+  transform: translateZ(-250px) rotateX(90deg);
+  transform-origin: top;
+  border-right: 2px solid rgb(82, 79, 79);
+  transform-style: preserve-3d;
+}
+main > .col > div:nth-of-type(5) > .bal {
+  width: 770px;
+  height: 700px;
+  position: absolute;
+  bottom: -116px;
+  left: -302px;
+  transform: rotateY(136deg);
+  display: flex;
+  z-index: 20;
+  transform-origin: top;
+  transform-style: preserve-3d;
+}
+main > .col > div:nth-of-type(5) > .bal > .ball {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  left: -5%;
+  bottom: 215px;
+  box-shadow: 0 0 10px 10px rgba(97, 80, 247, 0.521);
+  transform: rotateX(90deg);
+  z-index: 10;
+  transition: 2s;
+  overflow: hidden;
+  animation: ball 8s ease-in infinite alternate;
+}
+main > .col > div:nth-of-type(5) > .bal > .ball > img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes ball {
+  0% {
+    left: 28%;
+    bottom: 30%;
+  }
+  .2% {
+    left: 28%;
+    bottom: 30%;
+  }
+  20% {
+    left: 17%;
+    bottom: -20%;
+  }
+  25% {
+    left: 28%;
+    bottom: 30%;
+  }
+  30% {
+    left: 17%;
+    bottom: -20%;
+  }
+  35% {
+    left: -8%;
+    bottom: -50%;
+  }
+  40% {
+    bottom: 40%;
+    left: 12%;
+  }
+  55% {
+    bottom: -50%;
+    left: -8%;
+  }
+  65% {
+    bottom: 40%;
+    left: 12%;
+  }
+  70% {
+    bottom: -50%;
+    left: -8%;
+  }
+  75% {
+    bottom: -30%;
+    left: -20%;
+  }
+  80% {
+    bottom: 35%;
+    left: -5%;
+  }
+  85% {
+    bottom: -30%;
+    left: -20%;
+  }
+  90% {
+    left: -5%;
+    bottom: 35%;
+  }
+  95% {
+    bottom: -30%;
+    left: -20%;
+  }
+}
+.col1 {
+  width: 100px;
+  height: 230px;
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: 9;
+  transition: 2s;
+  transform: rotateY(-10deg) rotateX(10deg);
+}
+.col1 > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 5px;
+}
+.col1 > div:nth-of-type(1) {
+  background-color: rgba(245, 243, 243, 0.9843137255);
+  transform: translateZ(-250px);
+  border: 2px solid rgb(2, 2, 2);
+}
+.col1 > div:nth-of-type(2) {
+  transform: translateZ(250px);
+  background-color: rgba(249, 249, 249, 0.4941176471);
+}
+.col1 > div:nth-of-type(3) {
+  width: 520px;
+  transform: translateZ(250px) rotateY(90deg);
+  border: 2px solid black;
+  background-color: #fff;
+  transform-origin: left;
+}
+.col1 > div:nth-of-type(4) {
+  transform: translateZ(250px) rotateY(-90deg);
+  transform-origin: right;
+}
+.col1 > div:nth-of-type(5) {
+  width: 98px;
+  height: 510px;
+  background-color: #fff;
+  border-right: 2px solid rgb(82, 79, 79);
+  transform: translateZ(-250px) rotateX(90deg);
+  transform-origin: top;
+}
+
+.col2 {
+  width: 100px;
+  height: 310px;
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: 8;
+  transition: 2s;
+  transform: rotateY(-10deg) rotateX(10deg);
+}
+.col2 > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 3px;
+}
+.col2 > div:nth-of-type(1) {
+  background-color: rgba(245, 243, 243, 0.9843137255);
+  transform: translateZ(-250px);
+  border: 2px solid rgb(11, 11, 11);
+}
+.col2 > div:nth-of-type(2) {
+  transform: translateZ(250px);
+  background-color: rgba(249, 249, 249, 0.4941176471);
+}
+.col2 > div:nth-of-type(3) {
+  width: 520px;
+  transform: translateZ(250px) rotateY(90deg);
+  border: 2px solid black;
+  background-color: #fff;
+  transform-origin: left;
+}
+.col2 > div:nth-of-type(4) {
+  transform: translateZ(250px) rotateY(-90deg);
+  transform-origin: right;
+}
+.col2 > div:nth-of-type(5) {
+  width: 98px;
+  height: 510px;
+  background-color: #fff;
+  border-right: 2px solid rgb(82, 79, 79);
+  transform: translateZ(-250px) rotateX(90deg);
+  transform-origin: top;
+}
+
+.col3 {
+  width: 100px;
+  height: 390px;
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: 7;
+  transition: 2s;
+  transform: rotateY(-10deg) rotateX(10deg);
+}
+.col3 > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
+.col3 > div:nth-of-type(1) {
+  background-color: rgba(245, 243, 243, 0.9843137255);
+  transform: translateZ(-250px);
+  border: 2px solid rgb(12, 12, 12);
+}
+.col3 > div:nth-of-type(2) {
+  transform: translateZ(250px);
+  background-color: rgba(249, 249, 249, 0.4941176471);
+}
+.col3 > div:nth-of-type(3) {
+  width: 520px;
+  transform: translateZ(250px) rotateY(90deg);
+  border: 2px solid black;
+  background-color: #fff;
+  transform-origin: left;
+}
+.col3 > div:nth-of-type(4) {
+  transform: translateZ(250px) rotateY(-90deg);
+  transform-origin: right;
+}
+.col3 > div:nth-of-type(5) {
+  width: 98px;
+  height: 510px;
+  background-color: #fff;
+  transform: translateZ(-250px) rotateX(90deg);
+  transform-origin: top;
+  border-right: 2px solid black;
+}/*# sourceMappingURL=master2-rah.css.map */
